@@ -25,7 +25,9 @@ So thats as simple as I could explain the car controls, on to the respawn system
 
 Camera follow script - I watched a video from Brackeys to make my camera follow two players at the same time. The first thing I did was to make a list for each of the targets that camera should follow. One for Player1, one for Player2 and one for an empty gameObject called "center" which I placed in the middle of the map so the camera sort of focuses on the center as well. Then I made a Vector3 called "centerPoint" that is always going to be in the center of Player1, Player2 and "center". To do this I used something called Bounds. It basically makes a square around all the listed objects and resizes depending on the position of each player. The camera always is in the center of this square. Using a for-loop for every object of the list the bound encapsulates and updates the size. 
 In the Move function there is first a Vector3 that calls the GetCenterPoint which returns the center point of the bound which I just described. After that there is another Vector3 called newPosition which updates the position to the centerpoint + offset. The offset is variable where you can adjust the distance from the camera to the car. Then to smooth the camera I used Vector3.SmoothDamp. 
-In the Zoom function it uses a float called newZoom, that uses a Math.Lerp which goes between maxZoom and minZoom depending on GetGreatestDistance. 
+In the Zoom function it uses a float called newZoom, that uses a Math.Lerp which goes between maxZoom and minZoom depending on GetGreatestDistance. The GetGreatestDistance is similar to GetCenterPoint, but instead of returning the center point it returns the x-size of the bound. Then the script uses the camera component and changes the depth of field depending on what value the newZoom is.
+
+Finish Line script - 
 
 Videos used: 
 Making a main menu - https://www.youtube.com/watch?v=zc8ac_qUXQY
