@@ -7,6 +7,7 @@ Unity 2022.3.9f1
 My goal was to make a fun racing game with some simple 3d car physics. The way the game mechanics works is pretty straight forward, you are two players who are going to race against each other and finish the lap first. Since the maps are very long I decided that you only have to go for one lap instead of three. There are three maps in total. Each one gets a little harder. The first one is completely surrounded by walls so it's impossible to fall out, while the last map takes place in space and is barely protected by any walls, so it's easy to fall down. I've added a respawn system though, so if you fall down or land your car upside down or on the side the car explodes and you respawn either at the start line or the checkpoint depending on if you've crossed it or not. The game keeps track of the players score, and it's the best out of three. 
 
 To play the game, the first scene you have to load is the Main Menu. In the menu you can choose either to play all three maps in a row (press PLAY), and you can choose individual maps on (CHOOSE LEVEL). 
+In case the scenes are not in the build settings it should be in this order: MainMenu, Level01, PauseMenu, Level02, Level03.
 
 Player 1 Controllers:
 W - accelerate
